@@ -117,9 +117,11 @@
             .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
           $(".category-another-first")
             .append(`<div class="another-product col-xs-12 col-sm-6 col-md-6 col-lg-6">
+              <a class="another-link-wrap" href="/product/${another[i].id}">
             <div class="another-photo1"><img class="another-photo1" src="${imglist[0]}"></div>
             <div class="another-product1">${another[i].title}</div>
             <div class="another-price1">${money}<span>원</span></div>
+            </a>
           </div>`);
         }
       });
