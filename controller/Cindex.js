@@ -1,3 +1,5 @@
+const { User } = require("../model");
+
 exports.main = (req, res) => {
   res.render("index");
 };
@@ -11,9 +13,17 @@ exports.kakaoCallback = (req, res) => {
     email: req.body.email,
     name: req.body.name,
   };
-  res.render("./login/kakao_callback", {
-    email: req.body.email,
-    name: req.body.name,
+  User.findOne({
+    where: { id: data.email },
+  }).then((result) => {
+    if (result) {
+      res.redirect("/");
+    } else {
+      res.render("./login/kakao_callback", {
+        email: req.body.email,
+        name: req.body.name,
+      });
+    }
   });
 };
 

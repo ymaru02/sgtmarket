@@ -113,7 +113,7 @@
               categoryValue: `<p class='card-text elec'>${
                 categories[el.category_id]
               }</p>`,
-              count: el.product_like_users.length,
+              count: el.product_like_users?.length,
             };
           });
           if (order == "high")

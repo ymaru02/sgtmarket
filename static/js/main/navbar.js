@@ -10,7 +10,12 @@ nameposition.innerHTML = sessionStorage.id;
 
 function logout() {
   sessionStorage.removeItem("id");
-  window.location.href = "/";
+  axios({
+    url: "/api/logout",
+    method: "post",
+  }).then((result) => {
+    window.location.href = "/";
+  });
 }
 
 $(document).ready(function () {

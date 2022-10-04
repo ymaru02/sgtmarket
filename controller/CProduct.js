@@ -68,36 +68,23 @@ exports.product_list = (req, res) => {
 
 exports.product_popular = (req, res) => {
   const user_id = req.body.user_id;
-  if (user_id) {
-    Product.findAll({
-      include: [
-        {
-          model: ProductLikeUsers,
-          attributes: ["product_id", [sequelize.fn("count", "*"), "count"]],
-          required: false,
-          where: {
-            user_id: user_id,
-          },
-        },
-      ],
-      group: ["product_id"],
-    }).then((result) => {
-      res.send(result);
-    });
-  } else {
-    Product.findAll({
-      include: [
-        {
-          model: ProductLikeUsers,
-          attributes: ["product_id", [sequelize.fn("count", "*"), "count"]],
-          required: false,
-        },
-      ],
-      group: ["product_id"],
-    }).then((result) => {
-      res.send(result);
-    });
-  }
+
+  Product.findAll({
+    include: [
+      {
+        model: ProductLikeUsers,
+        attributes: [
+          "product_id",
+          "user_id",
+          [sequelize.fn("count", "*"), "count"],
+        ],
+        required: false,
+      },
+    ],
+    group: ["product_id"],
+  }).then((result) => {
+    res.send(result);
+  });
 };
 
 exports.categories = (req, res) => {

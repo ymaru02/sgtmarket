@@ -100,3 +100,8 @@ exports.user_delete = (req, res) => {
     res.send(true);
   });
 };
+
+exports.user_logout = (req, res) => {
+  res.clearCookie("jwt");
+  res.send("true");
+};

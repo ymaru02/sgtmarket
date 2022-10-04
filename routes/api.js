@@ -45,6 +45,7 @@ router.post("/signup/idcheck", uesr.signup_id_check);
 
 router.put("/user/update", uesr.user_update);
 router.delete("/user/delete", uesr.user_delete);
+router.post("/logout", uesr.user_logout);
 
 // 상품 생성
 router.post("/product", upload.array("img"), product.product_create);
