@@ -184,6 +184,7 @@ hr {
     display: flex;
     align-items: center;
     text-align: center;
+    justify-content: center;
     /* padding-left: 50px; */
     margin-top: 30px;
     padding-left: 40px;
@@ -252,6 +253,7 @@ hr {
     align-items: center;
     margin-top: 30px;
     padding-left: 30px;
+    justify-content: center;
   }
 
   .product-wrapper {

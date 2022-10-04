@@ -2,7 +2,7 @@
   padding: 0;
   margin: 0;
 }
-.flexwrapper{
+.flexwrapper {
   display: flex;
 }
 
@@ -200,8 +200,6 @@ input[type="radio"]:checked + label span span {
   width: 300px;
 }
 
-
-
 @media screen and (max-width: 700px) {
   .sign-main {
     margin: 0 25px;
@@ -299,7 +297,7 @@ input[type="radio"]:checked + label span span {
 }
 
 @media screen and (max-width: 390px) {
-  .colors{
+  .colors {
     font-size: 0.6rem;
     width: 150px;
     margin: 0;
@@ -318,10 +316,10 @@ input[type="radio"]:checked + label span span {
     margin: 0 0 0 10px;
   }
   .write-signup,
-  hr,
   .necessary,
+  hr,
   .signup-button {
-    width: 330px;
+    width: 380px;
   }
   .nec-text {
     font-size: 0.9rem;

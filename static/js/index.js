@@ -52,9 +52,7 @@ axios({
       <div class="new-box2">
       <a class="link-wrap" href="/product/${
         product[i].id
-      }"><img class="box-image" src="${
-        imglist[0]
-      }" style="width: 150px; height: 150px; object-fit: cover;">
+      }"><img class="box-image" src="${imglist[0]}">
       </div>
       <div class="box-title">${product[i].title}</div>
       <div class="box-price">${money}<span>원</span></div></a>
@@ -70,7 +68,7 @@ axios({
       $(".new-first")
         .append(`<div class="newb col-xs-6 col-sm-6 col-md-4 col-lg-3">
       <div class="new-box2">
-      <a class="link-wrap" href="/product/${product[i].id}"><img class="box-image" src="${imglist[0]}" style="width: 150px; height: 150px; object-fit: cover;">
+      <a class="link-wrap" href="/product/${product[i].id}"><img class="box-image" src="${imglist[0]}">
       </div>
       <div class="box-title">${product[i].title}</div>
       <div class="box-price">${money}<span>원</span></div></a>

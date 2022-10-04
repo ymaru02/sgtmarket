@@ -14,9 +14,11 @@
   display: flex;
   flex-direction: column;
   float: left;
-  margin: 0 50px 0 0;
+  margin: 55px 50px 0 0;
   width: 170px;
   font-size: 1rem;
+  position: sticky;
+  top: 50px;
 }
 .left-sgt > div {
   display: flex;
@@ -38,17 +40,23 @@
   border-bottom: 1px solid #eaeaea;
   font-size: 1rem;
 }
-.left-sgt-button > button:hover {
+.hover:hover {
   cursor: pointer;
   color: #eb8d00;
-  /* background-color: #f1f3f5; */
+}
+
+.withDraw {
+  color: red;
+}
+.withDraw:hover {
+  color: red;
 }
 .right-sgt {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  /* margin: 0 50px; */
-  width: 100%;
+  margin: 50px 0 0 0;
+  width: 811px;
 }
 .title {
   font-weight: 700;
@@ -172,18 +180,6 @@ hr {
   color: black;
   font-weight: 600;
   letter-spacing: -0.05em;
-}
-
-.withDraw {
-  display: flex;
-  justify-content: center;
-  margin-top: 100px;
-  font-size: 0.8rem;
-  color: gray;
-}
-
-.withDraw:hover {
-  color: black;
 }
 
 .d-none {

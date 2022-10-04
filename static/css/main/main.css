@@ -31,44 +31,6 @@
   vertical-align: middle;
   margin: auto;
 }
-.newb {
-  /* width: 200px; */
-  height: 230px;
-  align-items: center;
-}
-
-.att-box {
-  border: 1px #eeeeee solid;
-  width: 100%;
-  height: 180px;
-  display: flex;
-  justify-content: space-around;
-  padding: 20px;
-  vertical-align: middle;
-  margin: auto;
-}
-
-.new-box1,
-.new-box2,
-.new-box3,
-.new-box4,
-.new-box5,
-.new-box6,
-.new-box7 {
-  width: 150px;
-  height: 150px;
-  background-color: #eeeeee;
-  margin: auto;
-}
-
-.att-box1,
-.att-box2,
-.att-box3,
-.att-box4 {
-  width: 200px;
-  height: 180px;
-  background-color: #eeeeee;
-}
 
 .heart1 {
   /* 하트아이콘 */
@@ -94,17 +56,6 @@
   height: 40px;
   border-radius: 50px;
   cursor: pointer;
-}
-
-.new1 {
-  display: block;
-  height: 230px;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 45px;
-  letter-spacing: -0.05em;
-  padding-top: 20px;
-  padding-left: 30px;
 }
 
 .attention1 {
@@ -143,12 +94,101 @@ a {
   color: black;
 }
 
-@media screen and (min-width: 1146px) {
-}
-
-@media screen and (max-width: 1145px) {
-}
-
 .d-none {
   display: none;
+}
+
+@media screen and (min-width: 621px) {
+  .box-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+  }
+
+  .new-box2 {
+    width: 150px;
+    height: 150px;
+    background-color: #eeeeee;
+    margin: auto;
+  }
+
+  .new1 {
+    display: block;
+    height: 230px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 45px;
+    letter-spacing: -0.05em;
+    padding-top: 20px;
+    padding-left: 30px;
+  }
+
+  .newb {
+    /* width: 200px; */
+    height: 230px;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .box-image {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+  }
+
+  .new-box2 {
+    width: 120px;
+    height: 120px;
+    background-color: #eeeeee;
+    margin: auto;
+  }
+
+  .new1 {
+    display: block;
+    height: 200px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 45px;
+    letter-spacing: -0.05em;
+    padding-top: 10px;
+    padding-left: 15px;
+  }
+
+  .newb {
+    height: 200px;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .box-image {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .new-box2 {
+    width: 200px;
+    height: 200px;
+    background-color: #eeeeee;
+    margin: auto;
+  }
+
+  .new1 {
+    display: block;
+    height: 240px;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 45px;
+    letter-spacing: -0.05em;
+    padding-top: 10px;
+    padding-left: 30px;
+  }
+
+  .newb {
+    /* width: 200px; */
+    height: 270px;
+    align-items: center;
+  }
 }
