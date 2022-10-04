@@ -340,6 +340,7 @@ function modalFixItem() {
       .text(comma + "원");
   });
   modalClose();
+  window.location.href = "/mypage";
 }
 
 function mypage() {

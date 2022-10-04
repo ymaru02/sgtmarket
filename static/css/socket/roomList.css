@@ -146,7 +146,7 @@
 }
 
 .notibox {
-  width: 25px;
+  width: 30px;
   height: 25px;
   border-radius: 20px;
   background-color: #eb8d00;
@@ -156,3 +156,78 @@
 }
 
 /* 채팅방 목록 css 끝 */
+
+/* 미디어쿼리 시작 */
+
+@media (max-width: 1032px) {
+  .roomtimenoti {
+    width: 30%;
+  }
+  .roomtime {
+    text-align: right;
+  }
+}
+
+@media (max-width: 633px) {
+  .imgbox {
+    width: 50px;
+  }
+  .imgbox > img {
+    width: 50px;
+  }
+  .roomnickcon {
+    width: 150px;
+  }
+  .roomtimenoti {
+    width: 30%;
+  }
+}
+
+@media (min-width: 633px) {
+}
+
+@media (max-width: 540px) {
+}
+
+@media (min-width: 540px) {
+}
+
+@media (max-width: 415px) {
+  .logo {
+    height: 48px;
+  }
+  .imgbox {
+    width: 30px;
+    height: 60px;
+  }
+  .imgbox > img {
+    width: 30px;
+    height: 60px;
+  }
+  .roomtime {
+    display: none;
+  }
+  .roomnickcon {
+    width: 100px;
+    height: 60px;
+  }
+  .roomtimenoti {
+    width: 30%;
+    height: 60px;
+  }
+  .room {
+    width: 80%;
+  }
+  .item {
+    height: 60px;
+  }
+  .roomnickname {
+    line-height: 30px;
+  }
+  .roomcontents {
+    line-height: 30px;
+  }
+}
+
+@media (min-width: 415px) {
+}

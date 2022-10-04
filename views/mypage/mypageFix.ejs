@@ -10,20 +10,15 @@
   </head>
   <body>
     <%-include("../main/navbar.ejs")%>
+
     <div class="wrapper">
       <div class="left-sgt">
         <div>마이 SGT</div>
         <ul class="left-sgt-button">
-          <button type="button" class="hover" onclick="mypage();">
-            상품 목록
-          </button>
-          <button type="button" class="hover">거래 내역</button>
-          <button type="button" class="hover" onclick="mypick();">
-            찜한 상품
-          </button>
-          <button type="button" class="hover" onclick="myfix();">
-            개인 정보 수정
-          </button>
+          <button type="button" onclick="mypage();">상품 목록</button>
+          <button type="button">거래 내역</button>
+          <button type="button" onclick="mypick();">찜한 상품</button>
+          <button type="button" onclick="myfix();">개인 정보 수정</button>
           <button type="button" class="withDraw">회원탈퇴</button>
           <!-- 모달 창 -->
           <div id="myModal" class="modal2 hidden">
