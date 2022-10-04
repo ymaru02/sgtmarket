@@ -76,7 +76,7 @@ exports.product_popular = (req, res) => {
         attributes: [
           "product_id",
           "user_id",
-          [sequelize.fn("count", "*"), "count"],
+          [sequelize.fn("count", "product_id"), "count"],
         ],
         required: false,
       },
