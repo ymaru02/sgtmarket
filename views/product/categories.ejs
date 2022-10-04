@@ -8,10 +8,7 @@
     <%-include("../link.ejs")%>
     <link rel="stylesheet" href="/static/css/product/categories.css" />
     <!-- 폰트어썸 -->
-    <script
-      src="https://kit.fontawesome.com/a766c546f2.js"
-      crossorigin="anonymous"
-    ></script>
+
     <!-- 페이지네이션 기능 연결 시작 -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.1.4/pagination.min.js"></script>
     <link
@@ -33,9 +30,6 @@
 
         <div class="onestnavsort">
           <div class="twostnavsort">
-            <!-- <div class="sortnav"><a href="">랭킹순</a></div>
-            <div class="sortnav"><a href="">누적판매순</a></div>
-            <div class="sortnav"><a href="">후기많은순</a></div> -->
             <div class="sortnavleft">
               <button onclick="handleOnLow()">낮은가격순</button>
             </div>
@@ -73,15 +67,12 @@
       </div>
     </div>
     <!-- 페이지네이션 기능 끝 -->
-
     <%-include("../main/footer.ejs")%>
-
     <script src="/static/js/product/categories.js"></script>
     <script>
       function pgn(order, size) {
         let container = $("#pagination");
         // 페이지네이션 깨트리는곳
-        // container.pagination("destroy");
 
         container.empty();
         const category = "<%=category%>";
@@ -93,7 +84,6 @@
           data: { category: category, user_id: sessionStorage.getItem("id") },
         }).then((result) => {
           let dataSource = result.data.map((el) => {
-            // console.log(el);
             // 3자리마다 가격에 , 집어넣기
             var pricecom = `${el.price}`;
             var pricecom2 = pricecom
@@ -126,7 +116,6 @@
               count: el.product_like_users.length,
             };
           });
-          // dataSource = dataSource.reverse(); 필요없음
           if (order == "high")
             dataSource.sort((a, b) => b.priceValue - a.priceValue);
           else if (order == "low")
@@ -134,16 +123,11 @@
           else if (order == "new")
             dataSource.sort((a, b) => b.idnumValue - a.idnumValue);
 
-          // console.log("dataSourcepick", dataSource);
           container.pagination({
             dataSource: dataSource,
 
             pageSize: size,
             callback: function (data, pagination) {
-              // console.log(result.data);
-              // console.log(data);
-
-              // data.sort((a, b) => b.priceValue - a.priceValue); 필요없음
               $("#data-container").html(createList(data));
             },
           });

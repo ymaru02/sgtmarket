@@ -11,6 +11,7 @@
   <body>
     <div class="scene flex">
       <section id="chatbox">
+        <input id="target" class="d-none" type="text" />
         <div class="headerbox">
           <a href="/">
             <img
@@ -35,15 +36,17 @@
     </div>
     <script src="/socket.io/socket.io.js"></script>
     <script>
+      let target = "";
       let chatContent = [];
       let room_id = "<%=room_id%>";
       let user_name = sessionStorage.getItem("id");
       axios({
         url: "/api/content",
         method: "post",
-        data: { room_id: room_id },
-      }).then((res) => {
-        chatContent = res.data.content.split("/");
+        data: { room_id: room_id, user_id: sessionStorage.getItem("id") },
+      }).then((result) => {
+        target = result.data["participations.target"];
+        chatContent = result.data.content.split("/");
         chatContent.map((el) => {
           if (el) {
             const data_list = el.split(".");
@@ -55,6 +58,7 @@
 
       let socket = io.connect();
       socket.emit("create", `room${room_id}`);
+
       socket.on("db message", (data) => {
         chatContent.push(data.msg);
         let content = chatContent.join("/");

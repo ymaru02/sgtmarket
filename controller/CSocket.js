@@ -76,6 +76,14 @@ exports.socket_check = (req, res) => {
 exports.socket_content = (req, res) => {
   Room.findOne({
     raw: true,
+    include: [
+      {
+        model: Participation,
+        where: {
+          user_id: req.body.user_id,
+        },
+      },
+    ],
     where: {
       id: req.body.room_id,
     },

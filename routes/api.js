@@ -49,6 +49,7 @@ router.delete("/user/delete", uesr.user_delete);
 // 상품 생성
 router.post("/product", upload.array("img"), product.product_create);
 router.post("/products", product.product_list);
+router.post("/products/popular", product.product_popular);
 router.post("/product/myproduct", product.product_myproduct);
 router.post("/product/like", product.product_like);
 router.put("/product/update", upload.array("img"), product.product_update);

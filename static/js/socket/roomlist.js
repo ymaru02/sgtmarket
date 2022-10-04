@@ -32,7 +32,7 @@ axios({
   <div class="roomtimenoti">
     <div class="roomtime">${lastClock}</div>
     <div class="roomnotice">
-      <div class="notibox">100</div>
+      <div class="notibox"></div>
     </div>
   </div>`;
     li.classList.add("item");

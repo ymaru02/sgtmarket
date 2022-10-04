@@ -100,8 +100,20 @@
     </button>
   </div>
 </nav>
+
 <script
   src="https://kit.fontawesome.com/a766c546f2.js"
   crossorigin="anonymous"
 ></script>
+<script src="/static/js/main/toast.js"></script>
 <script src="/static/js/main/navbar.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script>
+  const socket = io.connect();
+  if (sessionStorage.getItem("id")) {
+    socket.emit("enter", sessionStorage.getItem("id"));
+  }
+  socket.on("alram", (data) => {
+    myToastFunction(data);
+  });
+</script>

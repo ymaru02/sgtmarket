@@ -38,23 +38,38 @@ const api_router = require("./routes/api");
 app.use("/api", api_router);
 
 const users = {};
+const socket_id = {};
+
 io.on("connection", (socket) => {
   socket.on("create", (msg) => {
     socket.join(msg);
   });
 
+  socket.on("enter", (data) => {
+    users[data] = socket.id;
+    socket_id[socket.id] = data;
+    console.log(users);
+    console.log(socket_id);
+  });
+
   socket.on("chat message", (data) => {
-    socket.broadcast.to(data.room_id).emit("chat message", {
-      msg: data.msg,
-    });
+    if (users[data.target]) {
+      io.to(users[data.target]).emit("alram", {
+        msg: data.msg,
+      });
+    } else {
+      socket.broadcast.to(data.room_id).emit("chat message", {
+        msg: data.msg,
+      });
+    }
     io.to(data.room_id).emit("db message", {
       msg: data.msg,
     });
   });
 
   socket.on("disconnect", () => {
-    io.emit("notice", `${users[socket.id]}님이 퇴장하셨습니다.`);
-    delete users[socket.id];
+    delete users[socket_id[socket.id]];
+    delete socket_id[socket.id];
     io.emit("users", users);
   });
 });

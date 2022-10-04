@@ -81,3 +81,15 @@ axios({
     }
   }
 });
+
+axios({
+  url: "/api/products/popular",
+  method: "post",
+  data: {
+    user_id: sessionStorage.getItem("id"),
+  },
+}).then((result) => {
+  result = result.data.sort((a, b) => {
+    return -(a.product_like_users.length - b.product_like_users.length);
+  });
+});

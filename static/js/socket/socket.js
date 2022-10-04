@@ -13,6 +13,7 @@ form.addEventListener("submit", function (e) {
   const userName = sessionStorage.getItem("id");
   myMsg(nowClockLog, input.value);
   socket.emit("chat message", {
+    target: target,
     room_id: `room${room_id}`,
     msg: `${userName}.${nowClockLog}.${input.value}`,
   });
@@ -35,6 +36,7 @@ function nowTimeLog() {
   } else {
     clock = "오전";
   }
+  if (minutes.length == 1) minutes = "0" + minutes;
   return `${clock} ${hours} : ${minutes}`;
 }
 

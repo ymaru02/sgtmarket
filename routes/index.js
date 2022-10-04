@@ -25,20 +25,20 @@ router.get("/categories/:id", product.categories);
 router.get("/search/:product", product.product_search);
 
 // 소캣
-router.get("/roomlist", socket.roomlist);
-router.get("/socket/:id", socket.socket);
-// router.get("/socket", verifyToken, socket.socket);
+// router.get("/socket/:id", socket.socket);
+router.get("/roomlist", verifyToken, socket.roomlist);
+router.get("/socket/:id", verifyToken, socket.socket);
 
 //상품 목록
-router.get("/mypage", main.mypage);
+router.get("/mypage", verifyToken, main.mypage);
 
 //찜한 상품
-router.get("/mypick", main.mypick);
+router.get("/mypick", verifyToken, main.mypick);
 
 //개인 정보 수정
-router.get("/myfix", main.myfix);
+router.get("/myfix", verifyToken, main.myfix);
 
 //개인정보 수정하는곳
-router.get("/infofix", main.infofix);
+router.get("/infofix", verifyToken, main.infofix);
 
 module.exports = router;

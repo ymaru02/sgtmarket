@@ -65,6 +65,42 @@ exports.product_list = (req, res) => {
     });
   }
 };
+
+exports.product_popular = (req, res) => {
+  const user_id = req.body.user_id;
+  if (user_id) {
+    Product.findAll({
+      include: [
+        {
+          model: ProductLikeUsers,
+          attributes: ["product_id", [sequelize.fn("count", "*"), "count"]],
+          required: false,
+          where: {
+            user_id: user_id,
+          },
+        },
+      ],
+      group: ["product_id"],
+    }).then((result) => {
+      console.log(result);
+      res.send(result);
+    });
+  } else {
+    Product.findAll({
+      include: [
+        {
+          model: ProductLikeUsers,
+          attributes: ["product_id", [sequelize.fn("count", "*"), "count"]],
+          required: false,
+        },
+      ],
+      group: ["product_id"],
+    }).then((result) => {
+      res.send(result);
+    });
+  }
+};
+
 exports.categories = (req, res) => {
   res.render("product/categories", { category: req.params.id });
 };
@@ -210,6 +246,10 @@ exports.search_item = (req, res) => {
   }
 };
 
+function shuffleArray(array) {
+  array.sort(() => Math.random() - 0.5);
+}
+
 exports.categories_items = (req, res) => {
   console.log(req.body.product_id);
   Product.findAll({
@@ -219,6 +259,7 @@ exports.categories_items = (req, res) => {
     },
   }).then((result) => {
     const data = result;
+    shuffleArray(data);
     res.send(data);
   });
 };
