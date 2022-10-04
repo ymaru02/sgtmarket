@@ -24,6 +24,7 @@ function chattingRoom(title, other_id, img) {
     img: img,
     user_id: sessionStorage.getItem("id"),
   };
+
   axios({
     url: "/api/roomcheck",
     method: "post",

@@ -234,42 +234,42 @@ function signupCreate() {
   });
 }
 
-id.addEventListener("input", function (event) {
+id.addEventListener("input", function () {
   if (valconfirm.test(id.value)) {
     idval.classList.add("d-none");
   } else {
     idval.classList.remove("d-none");
   }
 });
-pw.addEventListener("input", function (event) {
+pw.addEventListener("input", function () {
   if (valconfirm.test(pw.value)) {
     pwval.classList.add("d-none");
   } else {
     pwval.classList.remove("d-none");
   }
 });
-pwconfirm.addEventListener("input", function (event) {
+pwconfirm.addEventListener("input", function () {
   if (pwconfirm.value == pw.value) {
     pwconfirmval.classList.add("d-none");
   } else {
     pwconfirmval.classList.remove("d-none");
   }
 });
-name.addEventListener("input", function (event) {
+name.addEventListener("input", function () {
   if (name_valconfirm.test(name.value)) {
     nameval.classList.add("d-none");
   } else {
     nameval.classList.remove("d-none");
   }
 });
-email.addEventListener("input", function (event) {
+email.addEventListener("input", function () {
   if (email_valconfirm.test(email.value)) {
     emailval.classList.add("d-none");
   } else {
     emailval.classList.remove("d-none");
   }
 });
-phone.addEventListener("input", function (event) {
+phone.addEventListener("input", function () {
   if (valconfirm.test(phone.value)) {
     phoneval.classList.add("d-none");
   } else {

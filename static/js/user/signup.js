@@ -165,7 +165,6 @@ function emailconfirm() {
 }
 
 function signupCreate() {
-  // e.preventDefault();
   var form = document.querySelector("form");
 
   var id_key = 0;
@@ -264,7 +263,7 @@ function signupCreate() {
   });
 }
 
-id.addEventListener("input", function (event) {
+id.addEventListener("input", function () {
   if (valconfirm.test(id.value)) {
     id.setCustomValidity("");
     idval.classList.add("d-none");
@@ -272,7 +271,7 @@ id.addEventListener("input", function (event) {
     idval.classList.remove("d-none");
   }
 });
-pw.addEventListener("input", function (event) {
+pw.addEventListener("input", function () {
   if (valconfirm.test(pw.value)) {
     pw.setCustomValidity("");
     pwval.classList.add("d-none");
@@ -280,7 +279,7 @@ pw.addEventListener("input", function (event) {
     pwval.classList.remove("d-none");
   }
 });
-pwconfirm.addEventListener("input", function (event) {
+pwconfirm.addEventListener("input", function () {
   if (pw.value !== pwconfirm.value) {
     pwconfirm.setCustomValidity("");
     pwconfirmval.classList.remove("d-none");
@@ -288,7 +287,7 @@ pwconfirm.addEventListener("input", function (event) {
     pwconfirmval.classList.add("d-none");
   }
 });
-name.addEventListener("input", function (event) {
+name.addEventListener("input", function () {
   if (name_valconfirm.test(name.value)) {
     name.setCustomValidity("");
     nameval.classList.add("d-none");
@@ -296,7 +295,7 @@ name.addEventListener("input", function (event) {
     nameval.classList.remove("d-none");
   }
 });
-email.addEventListener("input", function (event) {
+email.addEventListener("input", function () {
   if (email_valconfirm.test(email.value)) {
     email.setCustomValidity("");
     emailval.classList.add("d-none");
@@ -304,7 +303,7 @@ email.addEventListener("input", function (event) {
     emailval.classList.remove("d-none");
   }
 });
-phone.addEventListener("input", function (event) {
+phone.addEventListener("input", function () {
   if (phone_valconfirm.test(phone.value)) {
     phone.setCustomValidity("");
     phoneval.classList.add("d-none");

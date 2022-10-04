@@ -1,3 +1,6 @@
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
 <nav>
   <div class="nav-top">
     <div class="nav-top-menu">
@@ -42,7 +45,7 @@
         onblur="this.placeholder = '세상의 모든 중고거래, SGT MARKET'"
       />
       <button type="button" id="search-button" onclick="searchBtn();">
-        <i class="fa fa-search" style="color: #eb8d00"></i>
+        <i class="fa fa-search search-icon" style="color: #eb8d00"></i>
       </button>
       <!-- </form> -->
     </div>
@@ -81,6 +84,62 @@
         <span style="color: #d3d3d3">　|　</span>
         <a href="/categories/interior" class="interior">가구/인테리어</a>
         <span style="color: #d3d3d3">　|　</span>
+        <a href="/categories/book" class="book">도서/음반/티켓</a>
+        <span style="color: #d3d3d3">　|　</span>
+        <a href="/categories/food" class="foodetc">식품/잡화</a>
+        <span style="color: #d3d3d3">　|　</span>
+        <a href="/categories/pet" class="animal">반려동물</a>
+      </div>
+    </div>
+  </div>
+  <!-- 반응형 nav-bar 950부터 -->
+  <div class="nav-top-second-small">
+    <div class="toggle2" style="padding-top: 25px">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <span style="color: #d3d3d3; padding-top: 25px">　|　</span>
+    <a href="/roomlist" class="chatting"
+      ><i
+        class="fa-solid fa-comments fa-lg"
+        style="color: #909090; padding-top: 35px; padding-left: 5px"
+      ></i
+    ></a>
+    <a href="/">
+      <img src="/static/img/logo.png" alt="logo" width="180px" height="70px" />
+    </a>
+    <a href="/mypick" class="like-list"
+      ><i
+        class="fa-solid fa-cart-shopping fa-lg"
+        style="color: #909090; padding-top: 35px"
+      ></i
+    ></a>
+    <span style="color: #d3d3d3; padding-top: 25px">　|　</span>
+    <a href="/mypage" class="user-info"
+      ><i
+        class="fa-solid fa-user fa-lg"
+        style="color: #909090; padding-top: 35px; padding-left: 5px"
+      ></i
+    ></a>
+  </div>
+  <hr class="hihr2" />
+  <div class="search-bar">
+    <div><input class="search-small" id="search2" type="text" /></div>
+    <button class="search-button-small" type="button" onclick="searchBtn2();">
+      <i class="fa fa-search search-icon2" style="color: #eb8d00"></i>
+    </button>
+  </div>
+  <div class="category-up2">
+    <div class="category-set-off2" id="category2">
+      <div class="category-first2">
+        <a href="/categories/life" class="living">생활/가전</a>
+        <span style="color: #d3d3d3">　|　</span>
+        <a href="/categories/electro" class="electric">전자제품</a>
+        <span style="color: #d3d3d3">　|　</span>
+        <a href="/categories/fashion" class="fashion">패션/의류</a>
+        <span style="color: #d3d3d3">　|　</span>
+        <a href="/categories/interior" class="interior">가구/인테리어</a><br />
         <a href="/categories/book" class="book">도서/음반/티켓</a>
         <span style="color: #d3d3d3">　|　</span>
         <a href="/categories/food" class="foodetc">식품/잡화</a>

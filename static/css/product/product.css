@@ -7,7 +7,7 @@
 .post-slider .post-wrapper .post {
   width: 100%;
 }
-.post-slider .post-wrapper .post img {
+.post-slider .post-wrapper {
   height: 417px;
   margin: auto;
 }
@@ -25,12 +25,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: auto;
 }
 
 .product-photo {
   width: 666px;
   height: 417px;
   display: flex;
+  align-items: center;
   /* background: #eeeeee; */
 }
 
@@ -50,25 +52,6 @@
 .product-wrapper4-2 {
   display: flex;
   align-items: center;
-}
-
-.product-wrapper5 {
-  display: flex;
-  align-items: center;
-  padding-left: 50px;
-  margin-top: 30px;
-  margin-left: 30px;
-  flex-direction: row;
-  gap: 500px;
-}
-
-.product-wrapper6 {
-  display: flex;
-  align-items: center;
-  padding-left: 50px;
-  margin-top: 30px;
-  margin-left: 30px;
-  gap: 20px;
 }
 
 .profile-photo img {
@@ -135,30 +118,20 @@ hr {
   padding-right: 20px;
 }
 
-.another-photo1,
-.another-photo2 {
-  width: 300px;
-  height: 210px;
-  background: #eeeeee;
-  border-radius: 10px;
-  margin-bottom: 10px;
-}
-
 .another-product1,
 .another-product2 {
   font-weight: 700;
 }
 
+.another-product {
+  /* width: 800px; */
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
 .category-another-first,
 .category-another-second {
   line-height: 30px;
-}
-
-.category-another {
-  font-weight: 700;
-  margin-left: 30px;
-  margin-top: 30px;
-  padding-left: 50px;
 }
 
 .chat-1 {
@@ -169,23 +142,6 @@ hr {
   color: white;
   font-weight: 700;
   right: 90px;
-  outline: 0px;
-  width: 100px;
-  height: 40px;
-  cursor: pointer;
-  border-radius: 20px;
-  opacity: 0.8;
-  z-index: 999;
-}
-
-.heart-1 {
-  position: relative;
-  border: none;
-  background-color: #ffe4bc;
-  color: black;
-  font-weight: 700;
-  top: -60px;
-  left: 550px;
   outline: 0px;
   width: 100px;
   height: 40px;
@@ -212,5 +168,145 @@ hr {
   cursor: pointer;
 }
 
-.d-none {
+.category-another {
+  font-weight: 700;
+  margin-left: 30px;
+  margin-top: 30px;
+  padding-left: 50px;
+}
+
+.hihr {
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 801px) {
+  .product-wrapper6 {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    /* padding-left: 50px; */
+    margin-top: 30px;
+    padding-left: 40px;
+  }
+
+  .product-wrapper {
+    width: 800px;
+    margin: auto;
+  }
+
+  .hr-2 {
+    margin-top: 20px;
+    height: 0.1px;
+    width: 680px;
+    border: 0 none;
+    color: #a4a4a4;
+    background-color: #a4a4a4;
+  }
+
+  .product-wrapper5 {
+    display: flex;
+    align-items: center;
+    padding-left: 50px;
+    margin-top: 30px;
+    margin-left: 30px;
+    flex-direction: row;
+    gap: 500px;
+  }
+
+  .post img {
+    height: 417px;
+    margin: auto;
+  }
+
+  .another-photo1,
+  .another-photo2 {
+    width: 270px;
+    height: 210px;
+    border: #eeeeee 1px solid;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    margin: auto;
+  }
+
+  .heart-1 {
+    position: relative;
+    border: none;
+    background-color: #ffe4bc;
+    color: black;
+    font-weight: 700;
+    top: -60px;
+    left: 550px;
+    outline: 0px;
+    width: 100px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 20px;
+    opacity: 0.8;
+    z-index: 999;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .product-wrapper6 {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    padding-left: 30px;
+  }
+
+  .product-wrapper {
+    width: 600px;
+    margin: auto;
+  }
+
+  .hr-2 {
+    margin-top: 20px;
+    height: 0.1px;
+    width: 500px;
+    border: 0 none;
+    color: #a4a4a4;
+    background-color: #a4a4a4;
+  }
+
+  .product-wrapper5 {
+    display: flex;
+    align-items: center;
+    padding-left: 50px;
+    margin-top: 30px;
+    margin-left: 30px;
+    flex-direction: row;
+    gap: 300px;
+  }
+
+  .post img {
+    height: 400px;
+    margin: auto;
+  }
+
+  .another-photo1,
+  .another-photo2 {
+    width: 200px;
+    height: 156px;
+    border: #eeeeee 1px solid;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    margin: auto;
+  }
+
+  .heart-1 {
+    position: relative;
+    border: none;
+    background-color: #ffe4bc;
+    color: black;
+    font-weight: 700;
+    top: -60px;
+    left: 440px;
+    outline: 0px;
+    width: 100px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 20px;
+    opacity: 0.8;
+    z-index: 999;
+  }
 }

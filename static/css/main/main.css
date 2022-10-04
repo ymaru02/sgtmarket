@@ -17,6 +17,7 @@
   border: 1px #eeeeee solid;
   padding: 20px;
   display: flex;
+  margin-top: -15px;
 }
 
 .new-first {
@@ -35,6 +36,7 @@
   height: 230px;
   align-items: center;
 }
+
 .att-box {
   border: 1px #eeeeee solid;
   width: 100%;

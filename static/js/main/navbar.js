@@ -26,6 +26,7 @@ $(window).scroll(function () {
     $("#btnTop").hide();
   }
 });
+
 $("#btnTop").on("click", (e) => {
   window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
 });
@@ -39,6 +40,23 @@ $(".toggle").click(function () {
     $("#category").addClass("category-set-off");
   }
 });
+
+$(document).ready(function () {
+  $(".toggle2").click(function () {
+    $(".toggle2").toggleClass("active");
+  });
+});
+
+$(".toggle2").click(function () {
+  if ($("#category2").hasClass("category-set-off2")) {
+    $("#category2").removeClass("category-set-off2");
+    $("#category2").addClass("category-set-on2");
+  } else if ($("#category2").hasClass("category-set-on2")) {
+    $("#category2").removeClass("category-set-on2");
+    $("#category2").addClass("category-set-off2");
+  }
+});
+
 function filter() {
   var value, name, item, i;
 
@@ -63,6 +81,23 @@ function searchBtn() {
     window.location.href = `/search/${keyword}`;
   }
 }
+
+function searchBtn2() {
+  searchInput = document.querySelector("#search2");
+  keyword = searchInput.value;
+  if (keyword == "") {
+    return;
+  } else {
+    window.location.href = `/search/${keyword}`;
+  }
+}
+
+var search2 = document.querySelector("#search2");
+search2.addEventListener("keydown", ({ key }) => {
+  if (key == "Enter") {
+    searchBtn2();
+  }
+});
 
 var search = document.querySelector("#search");
 search.addEventListener("keydown", ({ key }) => {

@@ -5,12 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script
-      src="https://code.jquery.com/jquery-3.6.1.min.js"
-      integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script
       type="text/javascript"
       src="https://static.nid.naver.com/js/naverLogin_implicit-1.0.3.js"
       charset="utf-8"
@@ -62,7 +56,6 @@
               class="kakao-button"
           /></a>
           <div id="naver_id_login" class="naver-button"></div>
-
         </div>
       </form>
     </div>
@@ -84,7 +77,7 @@
     <script type="text/javascript">
       var naver_id_login = new naver_id_login(
         "RgAJTyB9QRvqTCV77uKZ",
-        "http://localhost:8000/naver_callback"
+        "http://101.101.218.43:8000/naver_callback"
       );
       var state = naver_id_login.getUniqState();
       naver_id_login.setButton("green", 3, 51);

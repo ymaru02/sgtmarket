@@ -156,6 +156,7 @@ exports.product_create = (req, res) => {
 
   Product.create(data).then((result) => {
     res.send(result);
+    console.log(result);
   });
 };
 

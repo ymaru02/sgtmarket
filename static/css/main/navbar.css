@@ -54,6 +54,11 @@ input:focus {
 
 #search-button {
   background-color: white;
+  position: relative;
+  top: 10px;
+  left: -30px;
+  width: 8px;
+  height: 8px;
   border: none;
 }
 
@@ -62,21 +67,6 @@ input:focus {
   text-align: right;
   margin-left: 40px;
   margin-top: 30px;
-}
-
-.chatting,
-.like-list,
-.user-info,
-.living,
-.electric,
-.fashion,
-.interior,
-.book,
-.foodetc,
-.animal {
-  text-decoration: none;
-  color: black;
-  font-size: medium;
 }
 
 .toggle {
@@ -147,8 +137,8 @@ input:focus {
 
 #category {
   transition: 1s;
-  margin-top: 30px;
-  height: 20px;
+  /* margin-top: 30px; */
+  height: 50px;
 }
 
 .d-none {
@@ -163,17 +153,38 @@ input:focus {
 
 .category-up {
   transition: 0.1s;
-  height: 30px;
-  margin-bottom: 20px;
+  /* height: 30px; */
+  /* margin-bottom: 20px; */
 }
 
 .category-set-on {
+  height: 50px;
   opacity: 1;
 }
 
 .category-set-off {
   visibility: hidden;
+  height: 0px;
   opacity: 0;
+}
+
+.category-set-on2 {
+  display: block;
+  height: 50px;
+  opacity: 1;
+}
+
+.category-set-off2 {
+  display: none;
+  height: 0px;
+  opacity: 0;
+}
+
+.category-first2 {
+  text-align: center;
+  margin: auto;
+  transition: 1s;
+  font-size: 0.5em;
 }
 
 .button-list {
@@ -182,6 +193,56 @@ input:focus {
 
 .container-1 {
   padding-top: 5px;
+}
+
+.toggle2 {
+  /* margin-top: 30px; */
+  cursor: pointer;
+}
+
+.toggle2 span {
+  width: 23px;
+  height: 3px;
+  background: #909090;
+  display: block;
+  margin-bottom: 5px;
+  transition: 0.5s;
+}
+
+.toggle2 span:nth-child(1) {
+  transform-origin: left;
+}
+
+.toggle2 span:nth-child(2) {
+  transform-origin: center;
+}
+
+.toggle2 span:nth-child(3) {
+  transform-origin: left;
+}
+
+.toggle2.active span:nth-child(1) {
+  transform: rotate(45deg);
+}
+
+.toggle2.active span:nth-child(2) {
+  transform: scaleX(0);
+}
+
+.toggle2.active span:nth-child(3) {
+  transform: rotate(-45deg);
+}
+
+#category2 {
+  transition: 1s;
+  /* margin-top: 30px; */
+  height: 50px;
+}
+
+.category-up2 {
+  transition: 0.1s;
+  /* height: 50px; */
+  /* margin-bottom: 20px; */
 }
 
 @media screen and (min-width: 1201px) {
@@ -235,6 +296,49 @@ input:focus {
     margin-top: 13px;
     font-size: 0.8em;
   }
+
+  .nav-top-second-small {
+    display: none;
+  }
+
+  .hihr2 {
+    display: none;
+  }
+
+  .category-first2 {
+    display: none;
+  }
+
+  .category-up2 {
+    display: none;
+  }
+
+  .chatting,
+  .like-list,
+  .user-info,
+  .living,
+  .electric,
+  .fashion,
+  .interior,
+  .book,
+  .foodetc,
+  .animal {
+    text-decoration: none;
+    color: black;
+    font-size: medium;
+  }
+
+  .search-bar {
+    display: none;
+  }
+
+  .search-button-small {
+    display: none;
+  }
+
+  .search-small {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 1200px) {
@@ -280,6 +384,7 @@ input:focus {
     background-color: white;
     border-bottom: solid #eeeeee 1px;
     text-align: center;
+    vertical-align: middle;
   }
 
   .nav-top-welcome {
@@ -287,7 +392,238 @@ input:focus {
     margin-top: 13px;
     font-size: 0.8em;
   }
+
+  .nav-top-second-small {
+    display: none;
+  }
+
+  .hihr2 {
+    display: none;
+  }
+
+  .category-first2 {
+    display: none;
+  }
+  .category-up2 {
+    display: none;
+  }
+
+  .chatting,
+  .like-list,
+  .user-info,
+  .living,
+  .electric,
+  .fashion,
+  .interior,
+  .book,
+  .foodetc,
+  .animal {
+    text-decoration: none;
+    color: black;
+    font-size: medium;
+  }
+
+  .search-bar {
+    display: none;
+  }
+
+  .search-button-small {
+    display: none;
+  }
+
+  .search-small {
+    display: none;
+  }
 }
+
+@media screen and (max-width: 950px) {
+  .nav-top-second {
+    display: none;
+  }
+
+  .hihr {
+    display: none;
+  }
+
+  .category-up {
+    display: none;
+  }
+  .category-set-off {
+    display: none;
+  }
+
+  .category-set-on {
+    display: none;
+  }
+
+  .nav-top-second {
+    margin-bottom: 20px;
+  }
+
+  .nav-top-second-small {
+    margin-top: 20px;
+    margin-left: 150px;
+    margin-right: 150px;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .hihr2 {
+    display: none;
+    /* margin-top: 25px;
+    border: #d3d3d3 1px solid; */
+  }
+
+  .category-first2 {
+    display: block;
+  }
+  .category-up2 {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .living,
+  .electric,
+  .fashion,
+  .interior,
+  .book,
+  .foodetc,
+  .animal {
+    text-decoration: none;
+    color: black;
+    font-size: 1.85em;
+  }
+
+  .search-bar {
+    margin-top: 20px;
+    height: 50px;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .search-button-small {
+    width: 10px;
+    height: 10px;
+    display: block;
+    position: relative;
+    border: none;
+    background-color: white;
+    left: -30px;
+    top: -8px;
+  }
+
+  .search-small {
+    width: 50vw;
+    height: 30px;
+    border: #eeeeee 2px solid;
+    border-radius: 20px;
+    /* vertical-align: middle; */
+    align-items: center;
+    margin: auto;
+    display: block;
+    padding-left: 10px;
+    font-size: small;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .nav-top-second {
+    display: none;
+  }
+
+  .hihr {
+    display: none;
+  }
+
+  .category-up {
+    display: none;
+  }
+  .category-set-off {
+    display: none;
+  }
+
+  .nav-top-second-small {
+    margin-top: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .hihr2 {
+    display: none;
+    /* margin-top: 25px;
+    border: #d3d3d3 1px solid; */
+  }
+
+  .category-first2 {
+    display: block;
+  }
+  .category-up2 {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .living,
+  .electric,
+  .fashion,
+  .interior,
+  .book,
+  .foodetc,
+  .animal {
+    text-decoration: none;
+    color: black;
+    font-size: 1.7em;
+  }
+
+  .search-bar {
+    margin-top: 20px;
+    height: 50px;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .search-button-small {
+    width: 10px;
+    height: 10px;
+    position: relative;
+    display: block;
+    background-color: white;
+    border: none;
+    left: -30px;
+    top: -8px;
+  }
+
+  .search-small {
+    width: 60vw;
+    height: 30px;
+    border: #eeeeee 2px solid;
+    border-radius: 20px;
+    /* vertical-align: middle; */
+    align-items: center;
+    margin: auto;
+    display: block;
+    padding-left: 10px;
+    font-size: small;
+  }
+}
+
 .d-none {
   display: none;
+}
+
+.search-icon {
+  position: relative;
+  top: -8px;
+  left: -5px;
 }
