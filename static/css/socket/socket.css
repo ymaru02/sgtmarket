@@ -163,6 +163,119 @@
   text-align: center;
 }
 
+<<<<<<< HEAD
 .d-none {
   display: none;
+=======
+/* 미디어 쿼리 */
+@media (max-width: 2032px) {
+  .logo {
+    height: 48px;
+    margin-bottom: 5px;
+  }
+  /* 채팅 박스 height 값 */
+  #messages {
+    max-height: 65vh;
+  }
+  #messages > li {
+    padding: 0.5rem 0.5rem;
+  }
+}
+
+@media (max-width: 1032px) {
+  .logo {
+    height: 48px;
+    margin-bottom: 5px;
+  }
+  /* 채팅 박스 height 값 */
+  #messages {
+    max-height: 65vh;
+  }
+  #messages > li {
+    padding: 0.5rem 0.5rem;
+  }
+  #messages > li > div {
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 634px) {
+  .logo {
+    height: 48px;
+    margin-bottom: 5px;
+  }
+  /* 채팅 박스 height 값 */
+  #messages {
+    max-height: 60vh;
+  }
+  #messages > li {
+    padding: 0.5rem 0.5rem;
+  }
+  #messages > li > div {
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 415px) {
+  .logo {
+    height: 48px;
+    margin-bottom: 5px;
+  }
+  #messages > li > span {
+    font-size: 6px;
+  }
+  .chat__custom.msg.all {
+    font-size: 10px !important;
+    max-width: 100%;
+  }
+  #messages > li > div {
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+  /* 채팅 보내기 버튼 */
+  #form span {
+    padding: 0rem 0rem;
+  }
+  /* 채팅 박스 height 값 */
+  #messages {
+    max-height: 60vh;
+  }
+  #messages > li {
+    padding: 0.5rem 0.5rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .logo {
+    height: 48px;
+    margin-bottom: 5px;
+  }
+  #messages > li > span {
+    font-size: 6px;
+  }
+  .chat__custom.msg.all {
+    font-size: 10px !important;
+    max-width: 100%;
+  }
+  #messages > li > div {
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+  /* 채팅 보내기 버튼 */
+  #form span {
+    padding: 0rem 0rem;
+  }
+  /* 채팅 박스 height 값 */
+  #messages {
+    max-height: 60vh;
+  }
+  #messages > li {
+    padding: 0.5rem 0.5rem;
+  }
+  #input {
+    width: 20%;
+  }
+>>>>>>> upstream/feature
 }

@@ -71,6 +71,7 @@ exports.signup_create = (req, res) => {
     name: req.body.name,
     email: req.body.email,
     position: req.body.position,
+    image: "/static/img/profileimg.jpg",
   };
   User.create(data).then((result) => {
     res.send(true);

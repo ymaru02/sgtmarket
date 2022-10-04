@@ -82,7 +82,6 @@ exports.product_popular = (req, res) => {
       ],
       group: ["product_id"],
     }).then((result) => {
-      console.log(result);
       res.send(result);
     });
   } else {
