@@ -18,5 +18,6 @@
 
 
 ### Back end
-- 데이터 
+- 데이터 설계
 ![SGT](https://user-images.githubusercontent.com/48630055/196906650-17f52c48-e632-4875-8d4a-2a42c7b027d8.png)
+- JWT를 이용한 로그인 구현
